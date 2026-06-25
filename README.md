@@ -1,47 +1,97 @@
 # SalesSync CRM
 
-![SalesSync CRM](docs/images/salesSync-client-list-v1.png)
+> Salesforce CRM application built with Apex, Lightning Web Components (LWC), SOQL and Salesforce DX, focused on CRM development, automation and data-driven solutions.
 
-Projeto de estudo e portfólio desenvolvido na plataforma Salesforce com foco em desenvolvimento Apex e Lightning Web Components (LWC).
+---
 
-## Objetivo
+# 🇺🇸 English
 
-Construir um CRM funcional para gerenciamento de clientes, aplicando conceitos de desenvolvimento Salesforce utilizados no mercado.
+## Overview
 
-## Tecnologias Utilizadas
+SalesSync CRM is a Salesforce development project created to demonstrate CRM customization, backend development with Apex, frontend development with Lightning Web Components (LWC), and data-driven solutions within the Salesforce platform.
 
-* Salesforce Platform
-* Apex
-* SOQL
-* Lightning Web Components (LWC)
-* Salesforce CLI
-* Git e GitHub
+The project simulates a CRM environment where customer data is managed, queried, and displayed through custom Salesforce components.
 
-## Funcionalidades Implementadas
+## Technologies
 
-* Criação do objeto customizado `Cliente__c`
-* Classe Apex `ClienteController`
-* Consulta de dados utilizando SOQL
-* Método exposto para LWC com `@AuraEnabled(cacheable=true)`
-* Componente LWC `listaClientes`
-* Integração Apex + LWC utilizando `@wire`
-* Exibição dinâmica de clientes cadastrados
+- Salesforce DX
+- Apex
+- SOQL
+- Lightning Web Components (LWC)
+- JavaScript
+- Salesforce CLI
+- Git / GitHub
 
-## Status Atual
+## Current Features
 
-Versão inicial funcional concluída.
+- Custom Salesforce Object: `Cliente__c`
+- Custom fields for customer management
+- Apex Controller using SOQL queries
+- Lightning Web Component for client visualization
+- Salesforce DX project structure
+- Version control with Git
 
-Atualmente o sistema consulta registros do objeto `Cliente__c` através de Apex e exibe os dados em um Lightning Web Component.
+## Project Structure
 
-## Próximos Passos
+```text
+SalesSync-CRM
+│
+├── force-app
+│   └── main/default
+│       ├── classes
+│       ├── lwc
+│       └── objects
+│
+├── scripts
+├── Docs
+├── config
+├── README.md
+└── sfdx-project.json
 
-* Exibir clientes em `lightning-datatable`
-* Implementar filtros de pesquisa
-* Criar cadastro de clientes
-* Implementar edição de registros
-* Melhorar interface do usuário
-* Criar dashboards e indicadores
+Roadmap
 
-## Autor
+Future improvements:
 
-Daniel Tabosa
+Advanced LWC components
+Data tables and user interactions
+Apex test classes
+REST API integrations
+Python ETL pipeline
+PostgreSQL analytics database
+Automation workflows
+Salesforce + Data Analytics integration
+
+🇧🇷 Português
+Visão geral
+
+O SalesSync CRM é um projeto de desenvolvimento Salesforce criado para demonstrar personalização de CRM, desenvolvimento backend com Apex, desenvolvimento frontend utilizando Lightning Web Components (LWC) e soluções orientadas a dados dentro da plataforma Salesforce.
+
+O projeto simula um ambiente CRM onde informações de clientes são gerenciadas, consultadas e exibidas através de componentes personalizados.
+
+Tecnologias
+Salesforce DX
+Apex
+SOQL
+Lightning Web Components (LWC)
+JavaScript
+Salesforce CLI
+Git / GitHub
+Funcionalidades atuais
+Objeto Salesforce personalizado: Cliente__c
+Campos personalizados para gerenciamento de clientes
+Controller Apex utilizando consultas SOQL
+Componente LWC para visualização dos clientes
+Estrutura Salesforce DX organizada
+Versionamento utilizando Git
+Roadmap
+
+Próximas evoluções:
+
+Componentes LWC avançados
+Tabelas de dados e interações
+Classes de teste Apex
+Integrações via API REST
+Pipeline ETL com Python
+Banco PostgreSQL para análises
+Automações de processos
+Integração Salesforce + Dados
