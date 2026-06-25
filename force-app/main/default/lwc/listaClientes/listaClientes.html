@@ -1,0 +1,19 @@
+<template>
+
+    <h1>{titulo}</h1>
+
+    <template if:true={clientes.data}>
+
+        <p>Total de registros: {clientes.data.length}</p>
+
+        <template for:each={clientes.data} for:item="cliente">
+
+            <p key={cliente.Id}>
+                {cliente.Name}
+            </p>
+
+        </template>
+
+    </template>
+
+</template>
