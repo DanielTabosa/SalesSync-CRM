@@ -1,6 +1,6 @@
 public with sharing class ClienteController {
    
-    @auraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=true)
     public static List<Cliente__c> buscarClientes(){
 
         return[
@@ -11,4 +11,22 @@ public with sharing class ClienteController {
             FROM Cliente__c
         ];
     }
+
+    @AuraEnabled
+    public static void criarCliente(
+    String nome,
+    String empresa,
+    String email,
+    String status
+){
+    Cliente__c cliente = new Cliente__c();
+
+    cliente.Name = nome;
+    cliente.Empresa__c = empresa;
+    cliente.Email__c = email;
+    cliente.Status__c = status;
+
+    insert cliente;
+}
+
 }

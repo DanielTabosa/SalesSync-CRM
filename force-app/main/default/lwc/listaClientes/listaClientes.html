@@ -1,19 +1,54 @@
 <template>
 
-    <h1>{titulo}</h1>
+    <lightning-card title={titulo} icon-name="standard:account">
 
-    <template if:true={clientes.data}>
+        <div class="slds-p-around_medium">
+            <lightning-input
+                label="Nome"
+                class="slds-m-bottom_small"
+                data-campo="nome"
+                onchange={capturarCampo}>
+            </lightning-input>
 
-        <p>Total de registros: {clientes.data.length}</p>
+            <lightning-input
+                label="Empresa"
+                class="slds-m-bottom_small">
+            </lightning-input>
 
-        <template for:each={clientes.data} for:item="cliente">
+            <lightning-input
+                type="email"
+                label="E-mail"
+                class="slds-m-bottom_small">
+            </lightning-input>
 
-            <p key={cliente.Id}>
-                {cliente.Name}
-            </p>
+            <lightning-combobox
+                label="Status"
+                class="slds-m-bottom_medium">
+            </lightning-combobox>
+            
+            <lightning-button
+                label="Salvar"
+                variant="brand"
+            </lightning-button>
 
-        </template>
+            <hr class="slds-m-vertical_medium">
 
-    </template>
+            <template if:true={clientes.data}>
+
+                <p>Total de registros: {clientes.data.length}</p>
+
+                <template for:each={clientes.data} for:item="cliente">
+
+                    <p key={cliente.Id}>
+                        {cliente.Name}
+                    </p>
+
+                </template>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
 
 </template>
